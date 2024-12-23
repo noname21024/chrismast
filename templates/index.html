@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-red-900 text-gray-700 flex justify-center items-center min-h-screen p-4  ">
+        <iframe  allow="autoplay" id="audio"></iframe>
+        <audio id="player" style="display: none;" loop autoplay controls><source src="{% static 'chrismast.mp3' %}" type="audio/mp3"></audio>
+		<div class="letter">
+			
+			<div class="envelope" >
+				<div class="envelope-inner">
+					<div class="envelope-front">
+						<div class="postage-stamp ">
+							<div class="postage-stamp__inner">
+								<svg viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+									<path class="st0"
+										d="M449.414,478.037l-72.517-92.833c-16.287-0.187-24.22-12.898-28.482-19.753 c-0.437-0.718-0.968-1.57-1.499-2.389c-0.531,0.812-1.062,1.663-1.499,2.374c-4.294,6.901-12.304,19.753-28.81,19.753 c-16.521-0.016-24.5-12.875-28.794-19.777c-0.437-0.718-0.968-1.57-1.499-2.397c-0.547,0.82-1.062,1.671-1.515,2.39 c-4.294,6.901-12.305,19.745-28.795,19.745c-16.521-0.016-24.5-12.875-28.794-19.792c-0.437-0.711-0.968-1.561-1.499-2.389 c-0.547,0.828-1.078,1.678-1.515,2.389c-4.294,6.902-12.32,19.753-28.825,19.753c-16.521-0.015-24.5-12.882-28.795-19.792 c-0.437-0.71-0.968-1.561-1.499-2.381c-0.516,0.812-1.047,1.663-1.484,2.373c-4.263,6.84-12.18,19.473-28.357,19.715 l-72.658,93.012c-10.29,13.21-5.044,24.008,11.727,24.008c18.176,0,26.343-18.98,43.598-18.98 c17.271,0,17.271,28.935,34.526,28.935c17.27,0,17.27-28.935,34.525-28.935c17.271,0,17.271,28.935,34.526,28.935 c17.27,0,17.27-28.935,34.525-28.935c17.271,0,17.271,28.935,34.526,28.935c17.271,0,17.271-28.935,34.51-28.935 c17.286,0,17.286,28.935,34.51,28.935c17.271,0,17.271-28.935,34.526-28.935c17.27,0,25.453,18.98,43.614,18.98 C454.458,502.046,459.721,491.247,449.414,478.037z">
+									</path>
+									<path class="st0"
+										d="M134.783,366.84c15.162,0,15.162-24.359,30.309-24.344c15.162,0,15.131,24.376,30.278,24.391 c15.178,0,15.193-24.367,30.356-24.344c15.147,0,15.131,24.367,30.278,24.383c15.148,0,15.163-24.368,30.31-24.337 c15.162,0,15.146,24.36,30.293,24.376c15.162,0,15.162-24.36,30.309-24.337c15.163,0,15.148,24.36,30.294,24.383 c16.755,0,21.924-10.697,11.477-23.797l-60.93-76.484c-2.483,0.422-5.075,0.703-7.808,0.703c-10.868,0-17.411-6.246-21.315-11.376 c-3.92,5.13-10.447,11.376-21.315,11.376c-10.853,0-17.396-6.246-21.316-11.376c-3.919,5.13-10.462,11.376-21.33,11.376 c-10.852,0-17.396-6.238-21.315-11.368c-3.904,5.13-10.447,11.368-21.3,11.368c-2.732,0-5.309-0.281-7.792-0.703l-60.947,76.288 C112.859,356.106,118.013,366.825,134.783,366.84z">
+									</path>
+									<path class="st0"
+										d="M192.075,249.212c10.65,0,10.65-16.24,21.299-16.24s10.649,16.24,21.315,16.24 c10.681,0,10.681-16.24,21.314-16.24c10.666,0,10.666,16.24,21.331,16.24c10.634,0,10.634-16.24,21.315-16.24 c10.65,0,10.65,16.24,21.3,16.24c16.755,0,22.548-11.204,12.882-24.876l-59.26-83.776c-9.635-13.694-25.484-13.694-35.165,0 l-59.228,83.776C169.496,238.007,175.289,249.212,192.075,249.212z">
+									</path>
+									<polygon class="st0"
+										points="213.656,130.293 256.004,104.176 298.321,130.293 286.579,81.956 324.492,49.766 274.899,46.01 256.004,0 237.094,46.01 187.501,49.766 225.414,81.956 ">
+									</polygon>
+								</svg>
+							</div>
+						</div>
+						<div class="address">
+							<p >To: <span class="font-semibold">Phúc xinh</span></p>
+							<p>From: <span  class="font-semibold">Em yêu Nhi 🥰</span></p>
+						</div>
+					</div>
+					<div class="envelope-back">
+						<div class="fold back-fold"></div>
+						<div class="letter-content">
+							
+							<img src="https://raw.githubusercontent.com/cbolson/icodethis-challenges/main/assets/icodemas/merry-xmas.png" class="w-40">
+							<p>Chúc mừng Giáng sinh, em yêu!💕</p>
+                            <p>
+                                Em là món quà quý giá nhất mà anh có. Chúc em luôn rạng rỡ, hạnh phúc và tràn ngập yêu thương. Anh thương em nhiều!
+                                
+                                </p>
+							
+							<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<g>
+										<path class="st0"
+											d="M256.808,153.327c18.348,0,33.218-14.87,33.218-33.218c0-18.355-14.87-33.225-33.218-33.225 c-18.355,0-33.225,14.87-33.225,33.225C223.583,138.457,238.453,153.327,256.808,153.327z">
+										</path>
+										<path class="st0"
+											d="M118.284,145.153c18.399,3.065,97.11-3.065,97.11-3.065s-19.42-25.566,3.073-52.138 c0,0-28.551-25.037-54.182-44.98c-9.196-7.159-22.16-2.384-28.624,5.109c-16.239,18.826-33.283,62.349-34.754,67.472 C98.857,124.711,99.885,142.088,118.284,145.153z">
+										</path>
+										<path class="st0"
+											d="M295.403,142.088c0,0,78.718,6.13,97.117,3.065s19.428-20.442,17.377-27.602 c-1.472-5.123-18.515-48.646-34.754-67.472c-6.464-7.492-19.428-12.268-28.624-5.109c-25.631,19.942-54.182,44.98-54.182,44.98 C314.83,116.522,295.403,142.088,295.403,142.088z">
+										</path>
+										<path class="st0"
+											d="M223.141,426.273c0-1.224,0-2.515,0.13-3.674c-47.175-13.247-86.422-33.37-117.958-55.885 c-38.515-27.536-65.444-58.696-81.082-85.747c-6.688,4.42-13.5,10.862-20.674,21.102C1.782,304.641,0,308.322,0,313.655 c0,1.602,0.131,3.384,0.551,5.282c0.928,4.168,2.645,9.812,9.45,19.255c6.811,9.391,18.71,22.203,39.196,39.319 c3.123,2.58,24.406,19.746,41.522,31.956c5.703,4.051,11.036,7.551,14.725,9.689l0.608,0.37c3.558,2.392,9.08,5.58,15.218,8.892 c6.189,3.384,13.058,6.869,19.616,10.123c13.072,6.5,24.972,11.964,27.363,13.066c34.841,15.456,53.979,18.949,64.464,18.949 c1.957,0,3.616-0.116,5.095-0.305c-4.849-6.565-8.284-13.188-10.559-19.623C224.184,442.042,223.141,433.759,223.141,426.273z">
+										</path>
+										<path class="st0"
+											d="M113.458,352.7c29.928,21.406,67.226,40.544,112.125,53.363c0.608-4.239,1.405-7.913,1.899-11.044 c1.166-6.87,2.21-13.131,2.21-20.552c0-9.565-1.717-21.398-8.102-38.638c-10.674-28.645-16.13-55.015-16.13-78.755 c0-19.819,3.862-37.849,11.776-53.428l0.058-0.181l0.13-0.123c5.884-10.486,13.246-18.71,20.79-25.087 c-7.174-3.008-15.333-5.276-24.406-5.769h-0.928c-15.45,0-31.826,4.478-49.008,13.863c-17.174,9.384-35.08,23.616-53.051,42.631 c-12.21,12.877-22.819,20.978-32.573,26.312c-9.754,5.34-18.464,7.913-26.131,10.188c-5.514,1.587-10.79,3.182-16.065,5.515 C50.646,296.206,76.407,326.192,113.458,352.7z">
+										</path>
+										<path class="st0"
+											d="M511.935,316.851c-3.246-0.92-8.094-1.471-13.92-1.471c-14.783,0-35.95,3.434-58.95,10.79 c-0.304,0.064-0.551,0.188-0.855,0.311c-0.949,0.305-1.942,0.711-2.913,1.029c1.022,0.964,2,1.978,2.892,3.066 c5.275,6.131,8.34,14.036,8.34,22.688c0,19.566-15.826,35.392-35.392,35.392c-17.602,0-32.204-12.885-34.842-29.812 c-0.246-1.218-0.355-2.508-0.42-3.797c-2.486,1.507-4.971,3.116-7.406,4.739l-0.123,0.058 c-24.044,15.464-45.878,34.414-62.69,52.632c-16.74,18.095-28.58,35.631-32.566,46.921c-1.109,3.247-1.594,5.891-1.594,7.544 c0,0.493,0.065,0.92,0.123,1.224v0.066c2.087,0.427,4.659,0.732,8.16,0.797c10.486,0,29.624-3.493,64.399-18.95 c3.681-1.659,28.522-13.188,47.045-23.189c6.137-3.319,11.659-6.5,15.217-8.891l0.305-0.189l0.246-0.181 c3.739-2.145,9.072-5.646,14.782-9.696c5.703-4.108,11.9-8.71,17.667-13.123c11.587-8.892,21.768-17.109,23.797-18.834 c20.544-17.109,32.443-29.928,39.189-39.312c6.812-9.449,8.587-15.094,9.507-19.261c0.065-0.181,0.065-0.362,0.065-0.55H511.935z">
+										</path>
+										<path class="st0"
+											d="M247.786,382.569c3.065-4.109,6.377-8.283,10-12.514c18.516-21.899,43.972-45.392,72.987-64.284l0.065,0.065 c23.855-16.254,49.921-27.906,74.095-35.573c14.102-4.478,27.53-7.609,39.682-9.515c-3.747-1.405-7.725-3.181-11.906-5.456 c-9.746-5.334-20.356-13.435-32.566-26.312c-17.972-19.015-35.884-33.247-53.059-42.631c-17.174-9.384-33.552-13.863-49.001-13.863 h-0.862c-14.602,0.797-26.928,6.138-36.37,11.964l-0.246,0.116c-1.413,0.87-2.884,1.841-4.297,2.892 c-0.116,0.058-0.188,0.181-0.304,0.239c-0.123,0.066-0.304,0.188-0.492,0.312c-7.971,5.704-16.073,13.559-22.015,24.291 c-6.319,12.514-9.638,27.413-9.638,44.776c0,20.914,4.906,45.261,14.97,72.312c6.993,18.834,9.32,33.124,9.32,45.08 C248.149,377.352,248.033,379.99,247.786,382.569z">
+										</path>
+										<path class="st0"
+											d="M277.388,427.382c3.616-4.913,7.602-10,12.08-15.21c18.34-21.283,43.551-44.167,72.189-62.566 c0,0,0.065,0,0.065-0.059c5.029-3.376,10.181-6.507,15.334-9.507c16.377-9.449,33.182-16.935,49.501-22.638 c0.058,0,0.058,0,0.058,0c2.95-1.043,5.891-2.021,8.775-2.949c23.979-7.595,46.058-11.341,62.624-11.341 c4.717,0,9.014,0.304,12.877,0.979c-0.609-1.348-1.29-2.573-1.957-3.551c-7.55-10.797-14.724-17.363-21.717-21.776 c-0.732-0.55-1.53-1.043-2.269-1.471c-1.166-0.681-2.398-1.348-3.558-1.898c-2.949-0.492-6.442-0.739-10.427-0.739 c-15.029,0-36.436,3.435-59.617,10.913c-23.247,7.304-48.276,18.645-70.972,34.044h-0.058l-0.058,0.058 c-24.232,15.703-46.247,35.145-63.182,53.733c-13.428,14.725-23.674,29.138-29.312,40.239c-0.928,1.783-1.725,3.493-2.334,5.088 c-0.123,1.108-0.188,2.268-0.246,3.377c-0.065,0.855-0.065,1.782-0.065,2.637v0.979c0.123,5.514,0.92,11.225,3.008,17.174 c2.144,6.073,5.768,12.514,11.587,19.261c0.377-2.21,0.985-4.478,1.848-6.87c1.472-4.051,3.558-8.398,6.138-13 c1.956-3.5,4.225-7.116,6.797-10.805C275.424,430.135,276.402,428.729,277.388,427.382z">
+										</path>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="fold top-fold"></div>
+						<div class="fold bottom-fold"></div>
+						<div class="fold left-fold"></div>
+						<div class="fold right-fold"></div>
+					</div>
+				</div>
+			</div>
+			<div class="shadow"></div>	
+		</div>
+
+        
+	
+	</body>
+</html><style>body{
+  font-family: 'Exo 2', sans-serif;
+  padding-inline:1rem;
+}
+.letter {
+  --envelope-w: 300px;
+  --envelope-h: 200px;
+  --envelope-fold-top:50px;
+  --envelop-clr: #e15349;
+
+  position: absolute;
+  width: var(--envelope-w);
+  height: var(--envelope-w);
+
+  cursor: pointer;   
+}
+
+@media (min-width: 460px) {
+  .letter {
+      --envelope-w: 400px;
+      --envelope-h: 300px;
+      --envelope-fold-top:100px;
+    }
+}
+
+.envelope {
+  position: absolute;
+  height: var(--envelope-h);
+  width: var(--envelope-w);
+  transition: 400ms;
+  perspective: 1000px; 
+}
+.envelope-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+
+.envelope-front,
+.envelope-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.envelope-front {
+  background-color: var(--envelop-clr);
+  color: white;
+  height: calc(var(--envelope-h) / 1.5);
+}
+
+.envelope-back {
+  /* start with back rotated*/
+  transform: rotateY(180deg);
+}
+
+.envelope-front > * {
+  transition-delay: 300ms;
+}
+.letter:hover .envelope-front>* {
+  transition-delay: 150ms;
+}
+
+.postage-stamp {
+  background-color: #FFF;
+  background-image: radial-gradient(var(--envelop-clr) 50%, transparent 50%);
+  background-position: -0.25rem -0.25rem;
+  background-repeat: repeat;
+  background-size: 0.5rem 0.5rem;
+  padding: 0.25rem;
+  width:48px;
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+
+.postage-stamp__inner {
+  background-color: #FFF;
+  color: green;
+  height: 100%;
+  width: 100%;
+}
+.address{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align:left;
+  font-weight: lighter;
+  font-size: 1.1rem;
+}
+
+.fold{
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: 2;
+}
+
+
+.bottom-fold {
+  border-width: 0 0 calc(var(--envelope-w) / 2) var(--envelope-w);
+  border-color: transparent transparent #e95f55 transparent;
+}
+.top-fold {
+  top: var(--envelope-fold-top);
+  border-width: calc(var(--envelope-w) / 4) calc(var(--envelope-w) / 2) 0 calc(var(--envelope-w) / 2);
+  transform-origin: 50% 0%;
+  transition: 
+    transform 400ms , 
+    z-index 200ms;
+  border-color: #cf4a43 transparent transparent transparent;
+  
+}
+.back-fold {
+  width: var(--envelope-w);
+  height: calc(var(--envelope-w) / 2);
+  background: #cf4a43;
+  z-index: 0;
+}
+.left-fold {
+  border-width: calc(var(--envelope-w) / 4) 0 calc(var(--envelope-w) / 4) calc(var(--envelope-w) / 2);
+  border-color: transparent transparent transparent var(--envelop-clr);
+}
+.right-fold {
+  right: 0;
+  border-width: calc(var(--envelope-w) / 4) calc(var(--envelope-w) / 2) calc(var(--envelope-w) / 4)  0;
+  border-color: transparent var(--envelop-clr) transparent transparent ;
+}
+
+
+.letter-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 0%;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: 200ms;
+}
+.letter-content svg{
+  width:60px;
+  color: green;
+}
+.letter-content h1{
+  text-align: center;
+  color:red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.letter-content p{
+  font-weight: bold;
+}
+
+
+.shadow {
+  position: absolute;
+  top: var(--envelope-w);
+  left: 50%;
+  width: calc(var(--envelope-w) * 1.2);
+  height: 40px;
+  transition: 0.4s;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(56, 6, 6, 0.4);
+  filter: blur(10px);
+}
+
+.letter:hover .envelope {
+  transform: translateY(calc(var(--envelope-w) / 4));
+}
+.letter:hover .top-fold {
+  transition: transform 400ms 800ms, z-index 800ms;
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+.letter:hover .letter-content {
+  height: 420px;
+  transition: 500ms 1200ms;
+}
+.letter:hover .shadow {
+  width: calc(var(--envelope-w) * 1);
+  background: rgba(56, 6, 6, 0.6);
+  filter: blur(8px);
+}
+
+
+
+
+.letter:hover .envelope-inner {
+  transform: rotateY(180deg);
+}
+.letter:hover .envelope-front *{
+  scale: 0
+}
+</style><script type="module">
+                        // Add JavaScript code here
+                    </script>
+
+
+                    <script>
+                        // <![CDATA[
+                        var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
+                        var minisize=10; // smallest size of hearts in pixels
+                        var maxisize=20; // biggest size of hearts in pixels
+                        var hearts=100; // maximum number of hearts on screen
+                        var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+                        
+                        /*****************************
+                        *JavaScript Love Heart Cursor*
+                        *  (c)2013+ mf2fm web-design *
+                        *   http://www.mf2fm.com/rv  *
+                        *  DON'T EDIT BELOW THIS BOX *
+                        *****************************/
+                        var x=ox=400;
+                        var y=oy=300;
+                        var swide=800;
+                        var shigh=600;
+                        var sleft=sdown=0;
+                        var herz=new Array();
+                        var herzx=new Array();
+                        var herzy=new Array();
+                        var herzs=new Array();
+                        var kiss=false;
+                        
+                        if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+                          var oldonload=window.onload;
+                          if (typeof(oldonload)!='function') window.onload=funky;
+                          else window.onload=function() {
+                            if (oldonload) oldonload();
+                            funky();
+                          }
+                        }
+                        
+                        addRVLoadEvent(mwah);
+                        
+                        function mwah() { if (document.getElementById) {
+                          var i, heart;
+                          for (i=0; i<hearts; i++) {
+                            heart=createDiv("auto", "auto");
+                            heart.style.visibility="hidden";
+                            heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+                            heart.style.color=colours[i%colours.length];
+                            heart.style.pointerEvents="none";
+                            if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+                            else heart.style.opacity=0.45;
+                            heart.appendChild(document.createTextNode(String.fromCharCode(9829)));
+                            document.body.appendChild(heart);
+                            herz[i]=heart;
+                            herzy[i]=false;
+                          }
+                          set_scroll();
+                          set_width();
+                          herzle();
+                        }}
+                        
+                        function herzle() {
+                          var c;
+                          if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+                            ox=x;
+                            oy=y;
+                            for (c=0; c<hearts; c++) if (herzy[c]===false) {
+                              herz[c].firstChild.nodeValue=String.fromCharCode(9829);
+                              herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+                              herz[c].style.top=(herzy[c]=y-minisize)+"px";
+                              herz[c].style.fontSize=minisize+"px";
+                              herz[c].style.fontWeight='normal';
+                              herz[c].style.visibility='visible';
+                              herzs[c]=minisize;
+                              break;
+                            }
+                          }
+                          for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+                          setTimeout("herzle()", 30);
+                        }
+                        
+                        document.onmousedown=pucker;
+                        document.onmouseup=function(){clearTimeout(kiss);};
+                        
+                        function pucker() {
+                          ox=-1;
+                          oy=-1;
+                          kiss=setTimeout('pucker()', 100);
+                        }
+                        
+                        function blow_me_a_kiss(i) {
+                          herzy[i]-=herzs[i]/minisize+i%2;
+                          herzx[i]+=(i%5-2)/5;
+                          if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+                            herz[i].style.visibility="hidden";
+                            herzy[i]=false;
+                          }
+                          else if (herzs[i]>minisize+1 && Math.random()<2.5/hearts) break_my_heart(i);
+                          else {
+                            if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+                            herz[i].style.top=herzy[i]+"px";
+                            herz[i].style.left=herzx[i]+"px";
+                          }
+                        }
+                        
+                        function break_my_heart(i) {
+                          var t;
+                          herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+                          herz[i].style.fontWeight='bold';
+                            herzy[i]=false;
+                          for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+                          setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+                        }
+                        
+                        document.onmousemove=mouse;
+                        function mouse(e) {
+                          if (e) {
+                            y=e.pageY;
+                            x=e.pageX;
+                          }
+                          else {
+                            set_scroll();
+                            y=event.y+sdown;
+                            x=event.x+sleft;
+                          }
+                        }
+                        
+                        window.onresize=set_width;
+                        function set_width() {
+                          var sw_min=999999;
+                          var sh_min=999999;
+                          if (document.documentElement && document.documentElement.clientWidth) {
+                            if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+                            if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+                          }
+                          if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+                            if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+                            if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+                          }
+                          if (document.body.clientWidth) {
+                            if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+                            if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+                          }
+                          if (sw_min==999999 || sh_min==999999) {
+                            sw_min=800;
+                            sh_min=600;
+                          }
+                          swide=sw_min;
+                          shigh=sh_min;
+                        }
+                        
+                        window.onscroll=set_scroll;
+                        function set_scroll() {
+                          if (typeof(self.pageYOffset)=='number') {
+                            sdown=self.pageYOffset;
+                            sleft=self.pageXOffset;
+                          }
+                          else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                            sdown=document.body.scrollTop;
+                            sleft=document.body.scrollLeft;
+                          }
+                          else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+                            sleft=document.documentElement.scrollLeft;
+                            sdown=document.documentElement.scrollTop;
+                          }
+                          else {
+                            sdown=0;
+                            sleft=0;
+                          }
+                        }
+                        
+                        function createDiv(height, width) {
+                          var div=document.createElement("div");
+                          div.style.position="absolute";
+                          div.style.height=height;
+                          div.style.width=width;
+                          div.style.overflow="hidden";
+                          div.style.backgroundColor="transparent";
+                          return (div);
+                        }
+                        // ]]>
+                        </script>
