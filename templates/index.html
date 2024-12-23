@@ -9,9 +9,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500&display=swap" rel="stylesheet">
     </head>
-    <body class="bg-red-900 text-gray-700 flex justify-center items-center min-h-screen p-4  ">
-        <iframe  allow="autoplay" id="audio"></iframe>
-        <audio id="player" style="display: none;" loop autoplay controls><source src="{% static 'chrismast.mp3' %}" type="audio/mp3"></audio>
+    <body class="bg-red-900 text-gray-700 flex justify-center items-center min-h-screen p-4" style="position:relative">
+      <audio id="audio-player">
+        <source src="{% static 'chrismast.mp3' %}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
 		<div class="letter">
 			
 			<div class="envelope" >
@@ -94,7 +97,9 @@
 			</div>
 			<div class="shadow"></div>	
 		</div>
-
+    <button onclick="document.getElementById('audio-player').play()" style="position:absolute; bottom: 120px; padding: 5px 10px; background-color: white; border-radius: 10px">Phát nhạc</button>
+    {% comment %} <button onclick="document.getElementById('audio-player').play()">Play Audio</button> {% endcomment %}
+    
         
 	
 	</body>
@@ -312,10 +317,13 @@
   scale: 0
 }
 </style><script type="module">
-                        // Add JavaScript code here
+  window.onload = function() {
+    var audioPlayer = document.getElementById("audio-player");
+    audioPlayer.play(); // Phát âm thanh ngay khi trang tải xong
+};
                     </script>
 
-
+                    
                     <script>
                         // <![CDATA[
                         var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
